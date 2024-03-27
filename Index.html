@@ -146,6 +146,65 @@
                         <div class="valid-feedback">¡Correcto!</div>
                         <div class="invalid-feedback">Debe seleccionar un curso.</div>
                     </div>
+
+
+                    <div class="col-md-6">
+                        <label for="gradoAnterior" class="form-label">Grado anterior completado</label>
+                        <select class="form-select" id="gradoAnterior" name="gradoAnterior" required>
+                            <option selected disabled value="">Seleccione...</option>
+                            <option>1° nivel Prescolar</option>
+                            <option>2° nivel Prescolar</option>
+                            <option>3° nivel Prescolar</option>
+                            <option>1° Primaria</option>
+                            <option>2° Primaria</option>
+                            <option>3° Primaria</option>
+                            <option>4° Primaria</option>
+                            <option>5° Primaria</option>
+                            <option>6° Primaria</option>
+                            <option>1° Secundaria</option>
+                            <option>2° Secundaria</option>
+                            <option>3° Secundaria</option>
+                            <option>4° Secundaria</option>
+                            <option>5° Secundaria</option>
+                        </select>
+                        <div class="valid-feedback">¡Correcto!</div>
+                        <div class="invalid-feedback">Debe seleccionar un grado anterior.</div>
+                    </div>
+
+                    
+                    <!-- Nuevo campo: Nombre de la escuela anterior -->
+                    <div class="col-md-6">
+                        <label for="escuelaAnterior" class="form-label">Nombre de la escuela anterior</label>
+                        <input type="text" class="form-control" id="escuelaAnterior" name="escuelaAnterior" required />
+                        <div class="valid-feedback">¡Correcto!</div>
+                        <div class="invalid-feedback">Debe seleccionar la escula anteriro.</div>
+                    </div>
+                    
+                    <!-- Nuevo campo: Intereses extracurriculares -->
+                    <div class="col-md-6">
+                        <label for="interesesExtracurriculares" class="form-label">Intereses extracurriculares</label>
+                        <input type="text" class="form-control" id="interesesExtracurriculares" name="interesesExtracurriculares" />
+                        <div class="valid-feedback">¡Correcto!</div>
+                        <div class="invalid-feedback">Este campo es obligatorio.</div>
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                        <label for="idiomasHablados" class="form-label">Idiomas hablados</label>
+                        <select class="form-select" id="idiomasHablados" name="idiomasHablados" required>
+                            <option selected disabled value="">Seleccione...</option>
+                            <option>Español</option>
+                            <option>Creole</option>
+                            <option>Garifuna</option>
+                            <option>Miskito</option>
+                            <option>Inglés</option>
+                        </select>
+                        <div class="valid-feedback">¡Correcto!</div>
+                        <div class="invalid-feedback">Debe seleccionar un Idioma.</div>
+                    </div>
+
+
                     <div class="col-md-6">
                         <label for="informacionAdicional" class="form-label">Información Adicional</label>
                         <textarea class="form-control" id="informacionAdicional" name="informacionAdicional"
@@ -267,6 +326,35 @@
                     document.getElementById("cursoAplicar").value,
                     10,
                     140
+                );
+
+                doc.text(
+                    "Grado anterior completado: " +
+                    document.getElementById("gradoAnterior").value,
+                    10,
+                    150
+                );
+
+                doc.text(
+                    "Nombre de la escuela anterior: " +
+                    document.getElementById("escuelaAnterior").value,
+                    10,
+                    160
+                );
+
+                doc.text(
+                    "Intereses extracurriculares: " +
+                    document.getElementById("interesesExtracurriculares").value,
+                    10,
+                    170
+                );
+
+
+                doc.text(
+                    "Idiomas hablados: " +
+                    document.getElementById("idiomasHablados").value,
+                    10,
+                    180
                 );
 
                 // Guardar el PDF
